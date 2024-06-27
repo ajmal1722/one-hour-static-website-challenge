@@ -1,35 +1,43 @@
 import { useState } from 'react'
 import './App.css'
+import { data } from 'autoprefixer'
 
 function App() {
+  const [inputs, setInputs] = useState([{}])
   const [data, setData] = useState([])
 
   return (
 
-
     <>
-      <Post/>
-      <AddPost/>
+      <Posts data={data} />
+      <AddPost inputs ={inputs} setInputs={setInputs} data={data} setData={setData} />
     </>
   )
 }
 
 export default App
 
-function Post() {
+function Posts({ data }) {
+  console.log('data image:', data)
   return (
-    <div className='border m-4 w-1/2'>
-      <h1 className="text-xl m-4">
-        image description
-      </h1>
-
-    </div>
+    <>
+      {
+        data.map(post => (
+          <div className='border m-4 w-1/2'>
+            <h1 className="text-xl m-4">
+              {post.description}
+            </h1>
+            <img src={post.url} alt="" />
+            {console.log(post.url, 'llllllllllllllll')}
+          </div>
+        ))
+      }
+    </>
   )
 }
 
-function AddPost () {
-  const [inputs, setInputs] = useState([{}])
-  const [data, setData] = useState([])
+function AddPost ({inputs, setInputs, data, setData }) {
+  
 
   function handleChange(event) {
     const name = event.target.name;
