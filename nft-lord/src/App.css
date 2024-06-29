@@ -1,0 +1,21 @@
+body {
+  background-image: linear-gradient(to right, #4D0775
+  , #251337, #040013,#1A0229, #2A033F
+  );
+}
+
+.color-gradient {
+  background: -webkit-linear-gradient(#523BFF, #FF00F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.monkeyImg {
+  max-height: 90vh;
+}
+
+.button {
+  background: linear-gradient(to right, #523BFF, #FF00F6);
+  border-radius: 8px;
+  border: 2px solid white;
+}
