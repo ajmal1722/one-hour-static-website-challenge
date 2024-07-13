@@ -1,0 +1,23 @@
+.hero-section {
+  background-image: url('https://paragonrestaurant.in/wp-content/uploads/2023/01/slider-1.jpg');
+  width: screen;
+  height: 100vh;
+}
+
+.animated-text {
+  animation: moveText 8s linear infinite;
+}
+
+@keyframes moveText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200px); }
+}
+
+.animated-text-left {
+  animation: moveLeft 9s linear infinite;
+}
+
+@keyframes moveLeft {
+  0% { transform: translateX(200px); }
+  100% { transform: translateX(00px); }
+}
